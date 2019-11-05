@@ -1,0 +1,13 @@
+{
+  "name": "cat-purrs",
+  "version": "0.0.20191103",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "author": "Makoto Mizukami <comm@makotom.org>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>This is a Cat</title>
+
+<style>
+    div#purrs>p {
+        margin: 0;
+    }
+</style>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const purrs = document.querySelector('div#purrs');
+
+        document.querySelector('button#groom').addEventListener('click', () => {
+            const pElem = document.createElement('p');
+
+            pElem.appendChild(document.createTextNode('Purrr'));
+
+            purrs.appendChild(pElem);
+        });
+    })
+</script>
+
+<p>
+    <button id="groom" type="button">Groom</button>
+</p>
+
+<div id="purrs"></div>
