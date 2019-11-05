@@ -10,8 +10,20 @@ jobs:
       - run: npm i
       - run: npm run test
 
+  deploy:
+    docker:
+      - image: circleci/python:latest
+
+    steps:
+      - checkout
+      - run: sudo pip install awscli
+      - run: aws s3 cp --acl public-read index.html s3://purr0/
+
 workflows:
   version: 2
-  test:
+  test-and-deploy:
     jobs:
       - test
+      - deploy:
+          requires:
+            - test
